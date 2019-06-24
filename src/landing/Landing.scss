@@ -1,0 +1,45 @@
+@import '../styles/colors.scss';
+
+html {
+  scroll-behavior: smooth;
+  body {
+    margin: 0;
+    font-family: 'Montserrat';
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    .bg-circle {
+      position: fixed;
+      z-index: -1;
+      width:100vw;
+      height: 100vh;
+      background-color: $main-color;
+
+      canvas {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .landing-page {
+    padding-top: 84px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    width: 100vw;
+    .navigator {
+      display: none
+    }
+  }
+}
+

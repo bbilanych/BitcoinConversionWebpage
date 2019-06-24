@@ -1,0 +1,99 @@
+@import './colors.scss';
+
+%view-style {
+  //background-color: $main-color;
+  height: calc(100vh - 84px);
+}
+
+@-webkit-keyframes slideOnPortfolio {
+  0% {
+    opacity: 0;
+    margin: 50px;
+  }
+
+  100% {
+    opacity: 1;
+    margin: 25px;
+  }
+}
+
+@-moz-keyframes slideOnPortfolio {
+  0% {
+    opacity: 0;
+    margin: 50px;
+  }
+
+  100% {
+    opacity: 1;
+    margin: 25px;
+  }
+}
+
+@keyframes slideOnPortfolio {
+  0% {
+    opacity: 0;
+    margin: 50px;
+  }
+
+  100% {
+    opacity: 1;
+    margin: 25px;
+  }
+}
+
+%animate-slide-left {
+  opacity: 0; /* make things invisible upon start */
+  -webkit-animation: slideOnPortfolio ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: slideOnPortfolio ease-in 1;
+  animation: slideOnPortfolio ease-in 1;
+
+  -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes opacityAnimate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes opacityAnimate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityAnimate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+%animate-opacity {
+  opacity: 0; /* make things invisible upon start */
+  -webkit-animation: opacityAnimate ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: opacityAnimate ease-in 1;
+  animation: opacityAnimate ease-in 1;
+
+  -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
